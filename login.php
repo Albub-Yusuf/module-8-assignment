@@ -1,4 +1,11 @@
 <?php
+if(isset($_GET['notification'])){
+    $notification = $_GET['notification'];
+
+}else{
+    $notification = "";
+}
+
 
     if(isset($_GET['msg'])){
         $error = $_GET['msg'];
@@ -6,6 +13,8 @@
     }else{
         $error = "";
     }
+
+    
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +26,10 @@
     <title>Users Login</title>
 </head>
 <body>
+    <div class="notification">
+
+          <h4 style="color:green;"><?=$notification;?></h4><br>    
+    </div>
     <div class="login">
         <h3>Login Form</h3>
         <form action="actions.php" method="post">

@@ -33,7 +33,8 @@ if( (isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['email']) 
 		fclose($file);
 
         // redirect to login page
-       header("Location:login.php");
+        $notice = "Registration Completed Successfully!!";
+       header("Location:login.php?notification=$notice");
 
     }
     if($status ===0){
